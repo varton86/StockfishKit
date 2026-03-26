@@ -1,5 +1,9 @@
 # StockfishKit
 
+[![CI](https://github.com/YOUR_ORG/StockfishKit/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_ORG/StockfishKit/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/github/v/tag/YOUR_ORG/StockfishKit?label=version)](https://github.com/YOUR_ORG/StockfishKit/releases)
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/YOUR_ORG/StockfishKit/blob/main/LICENSE)
+
 `StockfishKit` is a Swift Package for iOS apps that vendors the official Stockfish engine and exposes an async Swift API on top of it.
 
 ## Installation
@@ -66,3 +70,10 @@ print(result.bestMove)
 - Stockfish is licensed under GPL-3.0-or-later, so applications distributing this package need to comply with that license.
 - The vendored source in this repository was taken from `official-stockfish/Stockfish` at commit `d173a0655d04b95497eefb75b400baa3eff56f93`.
 - Suggested first release tag: `v0.1.0`.
+
+## Publishing Checklist
+
+1. Replace every `YOUR_ORG` placeholder in this README with your GitHub owner or organization.
+2. Push `main` and the `v0.1.0` tag to GitHub.
+3. Open GitHub Releases and create the first release from tag `v0.1.0`.
+4. Paste the template from `.github/release-template.md` into the release notes and adjust the repository URL examples if needed.
