@@ -64,6 +64,31 @@ let result = try await engine.bestMove(
 print(result.bestMove)
 ```
 
+### Custom FEN Position
+
+```swift
+import StockfishKit
+
+let engine = try StockfishEngine()
+
+let result = try await engine.bestMove(
+    fen: "r1bqkbnr/pppp1ppp/2n5/4p3/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 3",
+    limits: .depth(12)
+)
+
+print(result.bestMove)
+```
+
+You can also pass a FEN plus a move list:
+
+```swift
+try await engine.bestMove(
+    fen: StockfishPosition.startingFEN,
+    moves: ["e2e4", "c7c5", "g1f3"],
+    limits: .depth(12)
+)
+```
+
 ## Notes
 
 - This package vendors Stockfish from the official repository.

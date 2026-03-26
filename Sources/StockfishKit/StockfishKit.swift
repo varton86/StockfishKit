@@ -200,6 +200,10 @@ public actor StockfishEngine {
         }
     }
 
+    public func setPosition(fen: String, moves: [String] = []) throws {
+        try setPosition(StockfishPosition(fen: fen, moves: moves))
+    }
+
     public func search(
         limits: StockfishSearchLimits,
         onInfo: InfoHandler? = nil
@@ -252,6 +256,19 @@ public actor StockfishEngine {
     ) async throws -> StockfishSearchResult {
         try setPosition(position)
         return try await search(limits: limits, onInfo: onInfo)
+    }
+
+    public func bestMove(
+        fen: String,
+        moves: [String] = [],
+        limits: StockfishSearchLimits = .depth(12),
+        onInfo: InfoHandler? = nil
+    ) async throws -> StockfishSearchResult {
+        try await bestMove(
+            in: StockfishPosition(fen: fen, moves: moves),
+            limits: limits,
+            onInfo: onInfo
+        )
     }
 
     public func stop() {
