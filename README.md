@@ -89,8 +89,13 @@ try await engine.bestMove(
 )
 ```
 
+## License
+
+This package is distributed under the GPL-3.0-or-later license.
+
+It vendors Stockfish, which is also licensed under GPL-3.0-or-later. If you distribute an application that includes this package, you must comply with the GPL license terms.
+
 ## Notes
 
 - This package vendors Stockfish from the official repository.
-- Stockfish is licensed under GPL-3.0-or-later, so applications distributing this package need to comply with that license.
 - The vendored source in this repository was taken from `official-stockfish/Stockfish` at commit `d173a0655d04b95497eefb75b400baa3eff56f93`.
