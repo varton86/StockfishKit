@@ -174,7 +174,8 @@ public actor StockfishEngine {
 
     public func setPosition(_ position: StockfishPosition) throws {
         let movePointers = position.moves.map { strdup($0) }
-        let success: Bool = position.fen.withCString { fenPointer in
+        let handle = engineHandle.rawValue
+        let success: Bool = position.fen.utf8CString.withUnsafeBufferPointer { fenBuffer in
             defer {
                 for pointer in movePointers {
                     free(pointer)
@@ -187,8 +188,8 @@ public actor StockfishEngine {
 
             return constPointers.withUnsafeBufferPointer { buffer in
                 stockfish_engine_set_position(
-                    engineHandle.rawValue,
-                    fenPointer,
+                    handle,
+                    fenBuffer.baseAddress,
                     buffer.baseAddress,
                     buffer.count
                 )
