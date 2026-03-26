@@ -95,9 +95,3 @@ try await engine.bestMove(
 - Stockfish is licensed under GPL-3.0-or-later, so applications distributing this package need to comply with that license.
 - The vendored source in this repository was taken from `official-stockfish/Stockfish` at commit `d173a0655d04b95497eefb75b400baa3eff56f93`.
 - Suggested first release tag: `v0.1.0`.
-
-## Publishing Checklist
-
-1. Push `main` and the `v0.1.0` tag to GitHub.
-2. Open GitHub Releases and create the first release from tag `v0.1.0`.
-3. Paste the template from `.github/release-template.md` into the release notes.
