@@ -19,14 +19,14 @@ https://github.com/varton86/StockfishKit.git
 Choose the dependency rule `Up to Next Major Version` and set the version to:
 
 ```text
-0.1.0
+0.1.1
 ```
 
 ### Package.swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/varton86/StockfishKit.git", from: "0.1.0")
+    .package(url: "https://github.com/varton86/StockfishKit.git", from: "0.1.1")
 ],
 targets: [
     .target(
