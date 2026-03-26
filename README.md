@@ -1,8 +1,8 @@
 # StockfishKit
 
-[![CI](https://github.com/YOUR_ORG/StockfishKit/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_ORG/StockfishKit/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/github/v/tag/YOUR_ORG/StockfishKit?label=version)](https://github.com/YOUR_ORG/StockfishKit/releases)
-[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/YOUR_ORG/StockfishKit/blob/main/LICENSE)
+[![CI](https://github.com/varton86/StockfishKit/actions/workflows/ci.yml/badge.svg)](https://github.com/varton86/StockfishKit/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/github/v/tag/varton86/StockfishKit?label=version)](https://github.com/varton86/StockfishKit/releases)
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/varton86/StockfishKit/blob/main/LICENSE)
 
 `StockfishKit` is a Swift Package for iOS apps that vendors the official Stockfish engine and exposes an async Swift API on top of it.
 
@@ -13,7 +13,7 @@
 In Xcode, open `File` -> `Add Package Dependencies...` and paste your repository URL:
 
 ```text
-https://github.com/YOUR_ORG/StockfishKit.git
+https://github.com/varton86/StockfishKit.git
 ```
 
 Choose the dependency rule `Up to Next Major Version` and set the version to:
@@ -26,7 +26,7 @@ Choose the dependency rule `Up to Next Major Version` and set the version to:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/YOUR_ORG/StockfishKit.git", from: "0.1.0")
+    .package(url: "https://github.com/varton86/StockfishKit.git", from: "0.1.0")
 ],
 targets: [
     .target(
@@ -73,7 +73,6 @@ print(result.bestMove)
 
 ## Publishing Checklist
 
-1. Replace every `YOUR_ORG` placeholder in this README with your GitHub owner or organization.
-2. Push `main` and the `v0.1.0` tag to GitHub.
-3. Open GitHub Releases and create the first release from tag `v0.1.0`.
-4. Paste the template from `.github/release-template.md` into the release notes and adjust the repository URL examples if needed.
+1. Push `main` and the `v0.1.0` tag to GitHub.
+2. Open GitHub Releases and create the first release from tag `v0.1.0`.
+3. Paste the template from `.github/release-template.md` into the release notes.

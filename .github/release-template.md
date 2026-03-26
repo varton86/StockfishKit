@@ -14,7 +14,7 @@ Initial public release of `StockfishKit`, a Swift Package that vendors the offic
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/YOUR_ORG/StockfishKit.git", from: "0.1.0")
+    .package(url: "https://github.com/varton86/StockfishKit.git", from: "0.1.0")
 ]
 ```
 
