@@ -10,7 +10,7 @@
 
 ### Xcode
 
-In Xcode, open `File` -> `Add Package Dependencies...` and paste your repository URL:
+In Xcode, choose `File > Add Package Dependencies...` and enter the repository URL:
 
 ```text
 https://github.com/varton86/StockfishKit.git
@@ -30,7 +30,7 @@ dependencies: [
 ],
 targets: [
     .target(
-        name: "YourApp",
+        name: "AppModule",
         dependencies: [
             .product(name: "StockfishKit", package: "StockfishKit")
         ]
